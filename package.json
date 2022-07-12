@@ -1,0 +1,14 @@
+{
+  "name": "we-ar-assignment",
+  "version": "1.0.0",
+  "description": "we ar assignment",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-node": "^10.8.2"
+  }
+}

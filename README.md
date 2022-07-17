@@ -1,9 +1,13 @@
 # Ball Collision Practice
 
-## 데모 영상
+## 1) 데모 영상
 <img src="https://res.cloudinary.com/dr4ka7tze/image/upload/v1657829505/we-ar-assignment-min_zj2ed3.gif" width="700px"/>
 
-## 프로젝트 목표
+
+## 2) 배포 링크
+[https://ball-collision-practice.netlify.app](https://ball-collision-practice.netlify.app)
+
+## 3) 프로젝트 목표
 
 - 생성된 캔버스에 10 ~ 20개의 공이 랜덤한 위치에 생성
 - 0 ~ 360 사이의 랜덤한 각도로 공 이동
@@ -12,7 +16,8 @@
 - 벽과 부딪힐경우 반사각으로 튕김
 - 공과 공이 부딪힐경우 반사각으로 튕김
 
-## 프로젝트 구조
+
+## 4) 프로젝트 구조
 ```
 
     src
@@ -23,7 +28,12 @@
 
 ```
 
-## 프로젝트 실행 방법
+
+## 5) 사용한 기술 스택
+Typescript
+
+
+## 6) 프로젝트 실행 방법
 1. vscode 익스텐션 중에 하나인 Live Server 설치
 2. index.html 우클릭 후, Open With Live Server 실행
 
@@ -33,7 +43,7 @@
 
 ### 현재 오류
 ```
-로컬에서 파일을 열면, CORS 오류 발생
+로컬에서 파일을 열면, CORS 오류 발생 -> live server로 열면 오류 X
 ```
 
 ### 원인
@@ -43,7 +53,4 @@ script 태그에 type="module"이 포함된 HTML을 로컬에서 로드할 경�
 -> Typescript 컴파일 과정에서 import 관련 오류가 발생하여 script 태그에 type 속성 추가 
 ```
 
-## 사용한 기술 스택
-Typescript
-
-### [프로젝트 과정 정리](https://github.com/mooon3356/ball-collision-practice/blob/master/client/README.md)
+### [프로젝트 과정 정리](https://github.com/mooon3356/ball-collision-practice/blob/master/README_2.md)

@@ -19,8 +19,6 @@ export default class Ball {
     this.pos = new Vector(x, y);
     this.speed = Vector.random(speed.x, speed.y);
     this.radius = radius;
-
-    console.log(this.speed);
   }
 
   drawBall(context: CanvasRenderingContext2D, deltaTime: number): void {

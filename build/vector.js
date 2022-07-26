@@ -1,4 +1,3 @@
-import Utils from "./utils.js";
 export default class Vector {
     constructor(x, y) {
         this.x = x;
@@ -15,13 +14,6 @@ export default class Vector {
     }
     static div(vector, scalar) {
         return new Vector(vector.x / scalar, vector.y / scalar);
-    }
-    static random(x, y) {
-        if (Utils.getRandomNumber(1, 10) % 2 !== 0)
-            x = -x;
-        if (Utils.getRandomNumber(1, 10) % 2 !== 0)
-            y = -y;
-        return new Vector(x, y);
     }
     dot(vector) {
         return this.x * vector.x + this.y * vector.y;

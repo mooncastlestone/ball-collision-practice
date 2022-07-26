@@ -1,5 +1,3 @@
-import Utils from "./utils.js";
-
 export default class Vector {
   constructor(public x: number, public y: number) {}
 
@@ -17,12 +15,6 @@ export default class Vector {
 
   static div(vector: Vector, scalar: number): Vector {
     return new Vector(vector.x / scalar, vector.y / scalar);
-  }
-
-  static random(x: number, y: number): Vector {
-    if (Utils.getRandomNumber(1, 10) % 2 !== 0) x = -x;
-    if (Utils.getRandomNumber(1, 10) % 2 !== 0) y = -y;
-    return new Vector(x, y);
   }
 
   dot(vector: Vector): number {

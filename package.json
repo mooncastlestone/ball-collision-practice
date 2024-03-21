@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "ball collision practice",
   "scripts": {
-    "build": "webpack -w"
+    "watch": "webpack -w",
+    "build": "webpack"
   },
   "author": "",
   "dependencies": {},

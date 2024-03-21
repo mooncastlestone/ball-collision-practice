@@ -1,6 +1,7 @@
-import Ball from "./ball.js";
-import Utils from "./utils.js";
-import Vector from './vector.js';
+import Ball from './ball';
+import Utils from "./utils";
+import Vector from './vector';
+import "../style.css"
 
 class App {
   private canvas: HTMLCanvasElement;
@@ -37,16 +38,16 @@ class App {
     // 랜덤으로 공 10 ~ 20개 생성
     for (let i = 0; i < Utils.getRandomNumber(10, 20); i++) {
       // 반지름, 좌표 랜덤 생성
-      const radius: number = Utils.getRandomNumber(10, 20);
-      const x: number = Utils.getRandomNumber(radius * 2, this.canvas.width - radius * 2);
-      const y: number = Utils.getRandomNumber(radius * 2, this.canvas.height - radius * 2);
+      const radius = Utils.getRandomNumber(10, 20);
+      const x = Utils.getRandomNumber(radius * 2, this.canvas.width - radius * 2);
+      const y = Utils.getRandomNumber(radius * 2, this.canvas.height - radius * 2);
 
       // 랜덤으로 0 ~ 360 각도를 가진 벡터 생성
-      const radian: number = Math.PI * 2 * Math.random()
-      const direction: Vector = new Vector(Math.cos(radian), Math.sin(radian))
+      const radian = Math.PI * 2 * Math.random()
+      const direction = new Vector(Math.cos(radian), Math.sin(radian))
       balls.push(new Ball({ x, y, radius, direction }));
     }
-    
+
     this.balls = balls;
   }
 
@@ -57,13 +58,13 @@ class App {
     this.startTime = currentTime;
 
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    
+
     this.balls.forEach((ball, idx) => {
       ball.drawBall(this.canvas, this.deltaTime);
-      
+
       const currentBall = ball;
       const restBalls = this.balls.slice(idx + 1);
-      
+
       restBalls.forEach((ball) => {
         ball.checkCollision(currentBall);
       });
@@ -72,4 +73,5 @@ class App {
     window.requestAnimationFrame(this.draw.bind(this));
   }
 }
+
 const app = new App();

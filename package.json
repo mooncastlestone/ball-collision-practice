@@ -1,14 +1,24 @@
 {
-  "name": "we-ar-assignment",
+  "name": "ball-collision-practice",
   "version": "1.0.0",
-  "description": "we ar assignment",
-  "main": "main.js",
+  "description": "ball collision practice",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -w"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ts-node": "^10.8.2"
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.24.3",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.10.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.3",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
   }
 }

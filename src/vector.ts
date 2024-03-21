@@ -1,5 +1,5 @@
 export default class Vector {
-  constructor(public x: number, public y: number) {}
+  constructor(public x: number, public y: number) { }
 
   static add(vector1: Vector, vector2: Vector): Vector {
     return new Vector(vector1.x + vector2.x, vector1.y + vector2.y);

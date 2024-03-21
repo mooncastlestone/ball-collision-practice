@@ -1,7 +1,7 @@
 import Utils from './utils';
 import Vector from "./vector";
 
-interface Props {
+type BallProps = {
   x: number;
   y: number;
   radius: number;
@@ -13,7 +13,7 @@ export default class Ball {
   private velocity: Vector
   private radius: number;
 
-  constructor({ x, y, radius, direction }: Props) {
+  constructor({ x, y, radius, direction }: BallProps) {
     this.pos = new Vector(x, y);
     this.velocity = Vector.mult(direction, Utils.getRandomNumber(200, 400))
     this.radius = radius;
